@@ -1,0 +1,11 @@
+Time Complexity
+Space Complexity
+Stable
+    Order maintained
+Internal SA 
+    All data is loaded into the memory(RAM)
+External SA 
+    All data is not loaded into the memory(RAM)
+Adaptive
+    Already sorted
+Recursive

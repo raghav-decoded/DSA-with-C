@@ -1,0 +1,41 @@
+A subgraph is a subset of the graph
+    
+    Graph:
+        0 - 1
+        | \ |
+        3 - 2
+         \ /
+          4
+         / \
+        5   6
+    subgraph:
+        0 - 1
+        |
+        3
+
+Connected graph
+    A graph in which there is a path from one point to another
+    if there are a disconnected points: disconnected graph
+Complete graph
+    undirected graph
+    every pair of unique vertices is connected by a unique edge
+
+Spanning Tree
+    A connected subgraph S of a graph G(V,E)
+    All vertices of G must be present in S
+    No of edges in S = V - 1
+A complete graph has n^(n-2) spanning trees.
+
+Spanning Tree Cost
+    Sum of weights of all edges in the spanning tree
+    minimum spanning tree: tree with minimum cost
+
+Graph:
+    0 - 1
+    | X |
+    3 - 2
+Spanning Tree:
+    0   1
+      X  
+    3 - 2  
+    Cost = C02 + C13 + C23

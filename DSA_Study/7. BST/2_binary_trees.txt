@@ -1,0 +1,30 @@
+ Binary Tree
+
+    Binary Tree
+    if Tree <= 2 children (0,1,2)
+    Tree of degree 2 
+
+    A tree is made up of nodes and edges.
+    n nodes = n-1 edges
+    Degree = number of direct children
+    Degree of a tree = Highest degree of a node among all nodes
+
+    Types of Binary Trees
+        Full or strict 
+            All nodes have either 0 or 2 children
+        Perfect 
+            Internal nodes have 2 children + Leaf nodes are on same level
+        Complete 
+            All levels are completely filled
+            or
+            If the last node is not completely filled, nodes should be as left as possible
+        Degenerate
+            Every parent Node has only 1 child
+        Skewed Trees
+            Left
+            Right 
+
+Representation of Binary Trees
+    Array
+    Linked
+    [Node *left, Data, Node *right]

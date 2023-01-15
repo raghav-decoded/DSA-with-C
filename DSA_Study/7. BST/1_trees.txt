@@ -1,0 +1,25 @@
+TREES
+
+    Parent node = connects to the child
+        e.g. [0] is the Parent node of [4]
+    Child node = connected to a Parent Node
+        e.g. [4] is the Child node of [0]
+    External/Leaf Node
+        No Children
+    Internal Node
+        Atleast 1 child
+    Depth
+        Number of edges from root to the node
+    Height
+        Number of edges from node to the deepest leaf
+    Sibling
+        Nodes with a common parent
+    Ancestors
+        Parent/Parent-of-parent
+    Descendants
+        Child/Child-of-Child
+    Depth 0            [8]       Root
+                      /   \      Edges
+    Depth 1         [7]   [0]    Nodes
+                    /       \
+    Depth 2       [3]       [4]  Leaf Nodes

@@ -1,0 +1,88 @@
+Why do we need rotation?
+    Insertion in AVL trees cause an imbalance.
+    Rotation helps in making the tree balanced again.
+    
+LL rotation
+    This is a balanced AVL tree
+        [7]{-1}
+        /
+     [5]{0}
+
+    ->insert(4) = 4<7, 4<5 
+    Now the tree is imbalanced
+          [7]{-2}
+          /
+      L [5]{-1}
+        /
+    L [4]{0}
+
+    To balance the tree we rotate it clockwise
+        [5]{0}
+        /  \      
+       /    \
+    [4]{0}  [7]{0}
+
+RR rotation
+    This is a balanced AVL tree
+        [7]{1}
+          \
+          [9]{0}
+
+    ->insert(11) 11>7, 11>9
+    Now the tree is imbalanced
+        [7]{2}
+           \
+           [9]{1} R
+              \
+              [11]{0} R
+
+    To balance the tree we rotate it anti-clockwise
+        [9]{0}
+        /  \      
+       /    \
+    [7]{0}  [11]{0}
+
+LR rotation
+    This is a balanced AVL tree
+        [7]{-1}
+        /
+     [4]{0}
+    ->insert(5) 5<7, 5>4
+            [7]{-2}
+            /
+         [4]{1} L
+           \
+           [5]{0} R 
+    1. rotate the left subtree in the anticlockwise direction
+           [7]{-2}
+            /
+          [5]{-1} 
+          /
+        [4]{0}   
+    2. rotate the entire tree in the clockwise direction.
+           [5]{0} 
+           /   \
+        [4]{0} [7]{0}
+     
+RL rotation
+    This is a balanced AVL tree
+        [7]{1}
+          \
+          [11]{0}
+    ->insert(10) 10>7, 10<11
+        [7]{2}
+           \
+          [11]{-1} R
+          /
+        [10]{0} L 
+    1. rotate the right subtree in the clockwise direction
+        [7]{2}
+           \
+          [10]{1} 
+             \
+            [11]{0}  
+    2. rotate the entire tree in the anti-clockwise direction.
+           [10]{0} 
+           /   \
+        [7]{0} [11]{0}
+     

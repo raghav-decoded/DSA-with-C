@@ -1,0 +1,21 @@
+A graph is a collection of nodes connected through edges.
+A tree is a type of a graph.
+
+V = {0,1,2,3,4,5}
+E = {{0,1},{1,2},{1,3},{3,5},{5,2},{2,4},{0,4}} 6 edges
+            [ 1 ] 
+           /  \  \ 
+          /    \  \
+     [ 0 ]  [ 2 ]  [ 3 ]
+          \   / \   /   
+           \ /   [ 5 ]
+          [ 4 ]
+
+A graph G = (V, E) is technically a collection of vertices and edges connecting these vertices. 
+
+Directed edges: One way connection
+    [] -> []
+Undirected edges: Two way connection
+    [] <-> [] or [] - []
+Directed graph: All directed edges
+Undirected graph: All undirected edges

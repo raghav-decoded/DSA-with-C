@@ -1,0 +1,172 @@
+LEFT ROTATE
+              [9]
+              / \
+            [8] [15]
+                 / \
+             [11]   [20]
+    Left Rotate(15)
+                [15]
+                /   \
+              [9]   [20]
+              /
+            [8]
+            Node removed from BST -[11]
+    insert(11) = 11<15, 11>9
+                [15]
+                /   \
+              [9]   [20]
+              / \
+            [8] [11]
+
+RIGHT ROTATE
+                [15]
+                /   \
+              [9]   [20]
+              / \
+            [8] [11]
+    Right Rotate(15)
+              [9]
+              / \
+            [8] [15]
+                   \
+                   [20]
+            Node removed from BST -[11]
+    insert(11) = 11>9, 11<15
+              [9]
+              / \
+            [8] [15]
+                 / \
+             [11]   [20]
+        
+Left Rotation + Right Rotation gives back the same tree.
+      [9]                                [15]
+      / \           Left Rotate          /   \
+    [8] [15]            <->            [9]   [20]
+         / \        Right Rotate       / \
+     [11]   [20]                     [8] [11]
+
+
+For Left-Left insertion - Right rotate once with respect to the first imbalance node.
+For Right-Right insertion - Left rotate once with respect to the first imbalance node.
+For Left-Right insertion - Left rotate once and then Right rotate once.
+For Right-Left insertion - Right rotate once and then Left rotate once.
+
+() contains the BF in this example
+                 (1)
+                 / \
+               (0) (0)
+               / \
+            (0)  (0)
+
+After insertion:
+                 (2)
+                 / \
+               (1) (0)
+               / \
+            (1)  (0)
+              \
+              (0)
+Starting to find the imbalanced node from the site of insertion
+                 *(2)
+                  / \
+               *(1) (0)
+                / \
+            *(1)  (0)
+              \
+              (0)
+Finding the case of insertion
+                 *(2)
+                  / \
+               L(1) (0)
+                / \
+            L(1)  (0)
+              \
+              (0) 
+= Left Left Insertion
+
+
+LEFT LEFT INSERTION
+                   (11){1}
+                  /    \
+                (9){0} (18){0}
+                /  \
+             (5){0} (10){0}
+insert(4) = 4<11, 4<9, 4<5
+                  (11){2}
+                  /     \
+                (9){1} (18){0}
+                /   \
+             (5){1}  (10){0}
+             /
+           (4)
+Finding the case of insertion
+                  *(11){2}
+                  /     \
+                *(9){1} (18){0}
+                /   \
+             *(5){1} (10){0}
+             /
+           (4)
+                  *(11){2}
+                  /     \
+                L(9){1} (18){0}
+                /   \
+             L(5){1} (10){0}
+             /
+           (4)
+For Left-Left insertion - Right rotate once with respect to the first imbalance node.
+                 (9)
+                /   \
+              (5)  (11)
+             /         \
+           (4)          (18)
+    -(10) separated from (9)
+insert(10)
+                 (9)
+                /   \
+              (5)   (11)
+             /      /  \
+           (4)   (10)   (18)
+
+
+RIGHT LEFT INSERTION
+                   (7){1}
+                  /    \
+                (1){0} (10){1}
+                         \
+                        (17){0}
+insert(16) = 16>7, 16>10, 16<17
+                   (7){2}
+                  /    \
+                (1){0} (10){2}
+                         \
+                        (17){1}
+                         /
+                      (16)
+Finding the case of insertion
+                   (7){2}
+                  /    \
+                (1){0} (10){2}R
+                         \
+                        (17){1}L
+                         /
+                      (16)
+For Right-Left insertion - Right rotate once and then Left rotate once.
+    Right rotate w.r.t. child of FIB in path of inserted node.
+    FIB = 10
+    child of FIB = 17
+                   (7)
+                  /    \
+                (1)    (10)
+                         \
+                         (16)
+                           \
+                           (17)
+    Left rotate w.r.t FIB
+                   (7)
+                  /    \
+                (1)    (16)
+                        /  \
+                    (10)   (17)
+    The tree is balanced.
+FIB is not root always.

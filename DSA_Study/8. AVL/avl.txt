@@ -1,0 +1,10 @@
+Need for AVL Tree
+    All operations are of order O(h) in a BST where h is the height of the tree
+    If the tree is not planned properly the height can get as high as n (skewed)
+    for an upper bound of O(nlogn) we need balanced trees
+
+What is an AVL Tree?
+    Height balanced BST
+    Balanced Factor <= 1
+    Balanced Factor = Height of Right Subtree - Height of Left Subtree
+    Can be -1,0,1 in an AVL Tree

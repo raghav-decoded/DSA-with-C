@@ -1,0 +1,3 @@
+Exploring a node(vertex)
+    Visiting all nodes connected to a node.
+Visiting a (node)

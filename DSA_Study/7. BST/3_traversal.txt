@@ -1,0 +1,48 @@
+Traversal in a Binary Tree
+
+    Pre-Order: Root Left_Tree Right_Tree
+    Depth 0            [8]       Root
+                      /   \      Edges
+    Depth 1         [7]   [0]    Nodes
+                    /       \
+    Depth 2       [3]       [4]  Leaf Nodes
+    -> 8[7][0]
+    -> 8[7[3 ]][0]
+    -> 8[7[3 ]][0[ 4]]
+    -> 87304
+
+    In-Order: Left_Tree Root Right_Tree
+    
+    Post-Order: Left_Tree Right_Tree Root
+
+*Trick
+Start travelling from the root.
+Start descending from the left side.
+
+Pre-Order Traversal(Cross the branch on the left)
+            Start
+           *-[7]  
+            /   \  
+        *-[2] *-[1]
+         /   \
+     *-[0]  *-[4]
+Result= 72041
+
+Post-Order Traversal(Cross the branch on the right)
+            Start
+             [7]-*  
+            /   \  
+          [2]-* [1]-*
+         /   \
+       [0]-*  [4]-*
+Result= 04217
+
+In-Order Traversal(Cross the branch on the bottom)
+            Start
+             [7]  
+            / | \  
+          [2]   [1]
+         / | \   |
+       [0]   [4]
+        |     |
+Result= 02471

@@ -1,0 +1,35 @@
+Binary Search Trees
+    It is a type of Binary Tree
+
+    Properties
+        All nodes of the left sub-tree have lesser value than the root.
+        All nodes of the right sub-tree have higher value than the root.
+        Left and Right sub-tree are also BST.
+        There are no duplicate nodes.
+        In-Order Traversal of a BST array sorted in ascending order.
+    
+       9
+      / \
+     4   11
+    / \    \
+   2   7    15
+      / \   /
+     5   8 14
+In-Order = 2 4 5 7 8 9 11 14 15
+This Tree is a BST.
+
+  7
+ / \
+1   6
+This is not a BST.
+
+For a tree with a given height H
+The maximum number of nodes on all levels is:
+  1 + 2 + 4 + 8 + ... + 2^H = 2^(H+1)−1
+If the number of nodes is N:
+  2^(H+1)−1 >= N
+  2^(H+1) >= N + 1
+Taking logarithm base(2) both sides
+  (H+1)log(2) >= log(N+1)
+  H >= log(N+1) - 1
+
